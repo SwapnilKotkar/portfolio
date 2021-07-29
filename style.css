@@ -197,20 +197,21 @@ body::-webkit-scrollbar {
   /* background-color: #222831; */
 }
 .container .sub-container-1 .home-page .content .right-content .intro {
-  height: 60%;
+  height: 50%;
   width: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(34, 40, 49, 0.9);
 }
+
 .container .sub-container-1 .home-page .content .right-content .intro h3 {
-  height: 60%;
+  max-height: 90%;
   width: 100%;
-  padding: 10px 40px;
+  padding: 10px 20px;
   color: whitesmoke;
-  font-size: 110%;
+  font-size: 120%;
   font-family: "Cairo", sans-serif;
   font-weight: 200;
   text-align: justify;
@@ -223,6 +224,7 @@ body::-webkit-scrollbar {
   .intro
   h3
   .coding {
+  font-size: 90%;
   background-color: whitesmoke;
   color: black;
   font-weight: bold;
@@ -237,11 +239,11 @@ body::-webkit-scrollbar {
   .right-content
   .intro
   .contact-me {
-  height: 10%;
+  height: 15%;
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 0 0 40px;
+  padding: 0 0 10px 20px;
 }
 .container
   .sub-container-1
@@ -251,8 +253,8 @@ body::-webkit-scrollbar {
   .intro
   .contact-me
   a {
-  width: 40%;
-  height: 95%;
+  width: 150px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,18 +358,34 @@ body::-webkit-scrollbar {
   justify-content: flex-end;
   align-items: center;
 }
-.container .sub-container-1 .about-page .about-content h3 .contact-me button {
-  height: 100%;
-  width: 100%;
+.container .sub-container-1 .about-page .about-content h3 .contact-me a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 50px;
+  width: 160px;
+  margin-left: 20px;
   font-family: "Cairo", sans-serif;
   font-weight: 600;
-  font-size: 90%;
+  font-size: 100%;
   padding: 10px 30px;
   background-color: #edc681;
   border: 1px solid transparent;
   color: black;
   transition: 0.3s ease-in-out;
   cursor: pointer;
+}
+.container
+  .sub-container-1
+  .about-page
+  .about-content
+  h3
+  .contact-me
+  .download-cv {
+  background: none;
+  color: #edc681;
+  text-decoration: underline 1px #edc681;
 }
 .container
   .sub-container-1
@@ -933,6 +951,71 @@ body::-webkit-scrollbar {
     font-size: 90%;
   }
 }
+@media screen and (max-width: 1580px) {
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 1455px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 100%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 75%;
+  }
+}
 @media screen and (max-width: 1366px) {
   .menu-list ul li a {
     font-size: 200%;
@@ -947,7 +1030,7 @@ body::-webkit-scrollbar {
     font-size: 130%;
   }
   .container .sub-container-1 .home-page .content .right-content .intro {
-    height: 60%;
+    height: 50%;
     width: 90%;
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
@@ -964,8 +1047,8 @@ body::-webkit-scrollbar {
     .intro
     .contact-me {
     width: 100%;
-    height: 10%;
-    padding: 0 0 0 20px;
+    height: 15%;
+    padding: 0 0 10px 20px;
   }
   .container .sub-container-1 .about-page .about-title h2 {
     font-size: 500%;
@@ -1035,12 +1118,12 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-1 .home-page .content .right-content .intro {
     width: 85%;
-    height: 60%;
+    height: 50%;
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
     height: 80%;
     padding: 7px 20px;
-    font-size: 100%;
+    font-size: 95%;
   }
   .container
     .sub-container-1
@@ -1049,9 +1132,9 @@ body::-webkit-scrollbar {
     .right-content
     .intro
     .contact-me {
-    height: 10%;
+    height: 15%;
     width: 100%;
-    padding: 0 0 0 20px;
+    padding: 0 0 10px 20px;
   }
   .container
     .sub-container-1
@@ -1060,7 +1143,7 @@ body::-webkit-scrollbar {
     .right-content
     .intro
     .contact-me
-    button {
+    a {
     font-size: 80%;
   }
   .container .sub-container-1 .about-page .about-title h2 {
@@ -1210,6 +1293,23 @@ body::-webkit-scrollbar {
     width: 50%;
   }
 }
+@media screen and (max-width: 1250px) {
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 100%;
+    width: 80%;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 1117px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 94%;
+  }
+}
+@media screen and (max-width: 1055px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 91%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .container .sub-container-1 .home-page .content {
     width: 95%;
@@ -1227,12 +1327,12 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-1 .home-page .content .right-content .intro {
     width: 95%;
-    height: 60%;
+    height: 50%;
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
     height: 80%;
     padding: 15px 20px;
-    font-size: 95%;
+    font-size: 92%;
   }
   .container
     .sub-container-1
@@ -1251,9 +1351,10 @@ body::-webkit-scrollbar {
     .right-content
     .intro
     .contact-me {
-    height: 10%;
+    height: 50px;
+    width: 100px;
     width: 100%;
-    padding: 0 0 0 20px;
+    padding: 0 0 10px 20px;
   }
   .container
     .sub-container-1
@@ -1262,7 +1363,8 @@ body::-webkit-scrollbar {
     .right-content
     .intro
     .contact-me
-    button {
+    a {
+    height: 90%;
     font-size: 80%;
   }
   .container .sub-container-1 .about-page .about-title h2 {
@@ -1280,9 +1382,6 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-2 .contact-page .contact-title h2 {
     font-size: 400%;
-  }
-  .container .sub-container-2 .contact-page .contact-title h2 {
-    font-size: 280%;
   }
   .container .sub-container-2 .contact-page .contact-content {
     flex-direction: column-reverse;
@@ -1387,6 +1486,27 @@ body::-webkit-scrollbar {
     font-weight: 200;
   }
 }
+@media screen and (max-width: 970px) {
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    width: 80%;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 955px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 908px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 85%;
+  }
+}
+@media screen and (max-width: 815px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 80%;
+  }
+}
 @media screen and (max-width: 768px) {
   .container .sub-container-1 .home-page .content .left-content h2 {
     font-size: 90%;
@@ -1396,14 +1516,46 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-1 .home-page .content .left-content h3 {
     font-size: 90%;
-    width: 75%;
-    text-align: right;
+    width: 100%;
+    text-align: center;
+  }
+  .container .sub-container-1 .home-page .content {
+    flex-direction: column;
+  }
+  .container .sub-container-1 .home-page .content .left-content {
+    width: 100%;
+    height: 40%;
   }
   .container .sub-container-1 .home-page .content .right-content {
-    height: 75%;
+    height: 60%;
+    width: 100%;
+    justify-content: center;
   }
   .container .sub-container-1 .home-page .content .right-content .intro {
     height: 85%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 125%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    height: 40px;
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 718px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 110%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 .contact-me a {
+    padding: 0;
+    font-size: 85%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1439,7 +1591,7 @@ body::-webkit-scrollbar {
   .container .sub-container-1 .home-page .content .right-content .intro {
     height: 75%;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     transform: scale(0.9, 0.9);
   }
@@ -1468,7 +1620,7 @@ body::-webkit-scrollbar {
     .contact-me {
     width: 100%;
     height: 10%;
-    padding-left: 15px;
+    padding: 0 0 10px 20px;
   }
   .container .sub-container-1 .about-page .about-title h2 {
     font-size: 280%;
@@ -1595,6 +1747,16 @@ body::-webkit-scrollbar {
     font-weight: 200;
   }
 }
+@media screen and (max-width: 535px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 110%;
+  }
+}
+@media screen and (max-width: 513px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 105%;
+  }
+}
 @media screen and (max-width: 485px) {
   .menu-btn .hamburger {
     width: 40px;
@@ -1646,7 +1808,7 @@ body::-webkit-scrollbar {
     transform: scale(0.9, 0.9);
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    padding: 25px 15px;
+    padding: 15px 15px 0px 15px;
     font-size: 100%;
     line-height: 1.8;
   }
@@ -1668,7 +1830,7 @@ body::-webkit-scrollbar {
     .intro
     .contact-me {
     width: 100%;
-    height: 10%;
+    height: 15%;
   }
   .container .sub-container-1 .about-page .about-title h2 {
     font-size: 280%;
@@ -1795,7 +1957,23 @@ body::-webkit-scrollbar {
     font-weight: 200;
   }
 }
+@media screen and (max-width: 466px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 100%;
+  }
+}
+@media screen and (max-width: 433px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 95%;
+  }
+}
 @media screen and (max-width: 414px) {
+  .menu-btn {
+    top: 20px;
+    left: 20px;
+    height: 40px;
+    width: 40px;
+  }
   .menu-btn .hamburger {
     width: 40px;
   }
@@ -1835,7 +2013,7 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-1 .home-page .content .right-content {
     width: 100%;
-    height: 60%;
+    height: 50%;
     align-items: flex-start;
   }
   .container .sub-container-1 .home-page .content .right-content .intro {
@@ -1843,13 +2021,11 @@ body::-webkit-scrollbar {
     width: 100%;
     justify-content: center;
     align-items: flex-start;
-    transform: scale(0.9, 0.9);
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
     height: 85%;
-    padding: 15px 15px;
-    font-size: 95%;
-    line-height: 1.8;
+    padding: 15px 15px 0px 15px;
+    font-size: 88%;
   }
   .container
     .sub-container-1
@@ -1883,6 +2059,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     padding: 0 0 0 15px;
+    font-size: 88%;
   }
   .container .sub-container-1 .about-page .about-title h2 {
     font-size: 280%;
@@ -1892,9 +2069,11 @@ body::-webkit-scrollbar {
     width: 91%;
     text-align: left;
   }
-  .container .sub-container-1 .about-page .about-content h3 .contact-me button {
-    padding: 8px 15px;
+  .container .sub-container-1 .about-page .about-content h3 .contact-me a {
     font-size: 70%;
+    padding: 0;
+    width: 140px;
+    height: 35px;
   }
   .container .sub-container-2 .skills-page .skills-title h2 {
     font-size: 280%;
@@ -2050,11 +2229,10 @@ body::-webkit-scrollbar {
     width: 100%;
     justify-content: flex-start;
     align-items: flex-start;
-    transform: scale(0.9, 0.9);
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    padding: 15px 15px;
-    font-size: 90%;
+    padding: 15px 15px 0 15px;
+    font-size: 85%;
   }
   .container
     .sub-container-1
@@ -2067,7 +2245,7 @@ body::-webkit-scrollbar {
     height: 10%;
   }
 }
-@media screen and (max-width: 393px) {
+@media screen and (max-width: 399px) {
   .container .sub-container-1 .home-page .content .left-content h2 {
     font-size: 70%;
   }
@@ -2088,9 +2266,8 @@ body::-webkit-scrollbar {
     height: 90%;
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    font-size: 90%;
-    padding: 15px 15px;
-    line-height: 1.8;
+    font-size: 83%;
+    padding: 15px 15px 0px 15px;
   }
   .container
     .sub-container-1
@@ -2129,7 +2306,7 @@ body::-webkit-scrollbar {
     text-align: left;
   }
   .container .sub-container-1 .home-page .content .right-content .intro {
-    height: 95%;
+    height: 90%;
     width: 100%;
     justify-content: flex-start;
     align-items: flex-start;
@@ -2137,8 +2314,8 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
     height: 85%;
-    padding: 20px 15px;
-    font-size: 94%;
+    padding: 15px 15px 0 15px;
+    font-size: 80%;
     line-height: 1.8;
   }
   .container
@@ -2150,6 +2327,16 @@ body::-webkit-scrollbar {
     .contact-me {
     width: 100%;
     height: 10%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    font-size: 89%;
   }
   .container
     .sub-container-2
@@ -2182,13 +2369,22 @@ body::-webkit-scrollbar {
     font-weight: 200;
   }
 }
-
-@media screen and (width: 414px) and (height: 736px) {
+@media screen and (max-width: 414px) and (max-height: 736px) {
   .container .sub-container-1 .home-page .content .right-content .intro {
     height: 90%;
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    font-size: 95%;
+    font-size: 82%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    font-size: 82%;
   }
 }
 @media screen and (width: 375px) and (height: 667px) {
@@ -2196,15 +2392,15 @@ body::-webkit-scrollbar {
     height: 90%;
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    font-size: 85%;
+    font-size: 75%;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 368px) {
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
     height: 87%;
-    font-size: 88%;
+    font-size: 80%;
     line-height: 1.8;
-    padding: 15px 15px;
+    padding: 15px 15px 0px 15px;
   }
   .container .sub-container-1 .about-page .about-content h3 {
     font-size: 80%;
@@ -2217,7 +2413,17 @@ body::-webkit-scrollbar {
     .intro
     .contact-me {
     width: 100%;
-    height: 10%;
+    height: 15%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    font-size: 85%;
   }
   .container
     .sub-container-2
@@ -2248,6 +2454,126 @@ body::-webkit-scrollbar {
     .address-details {
     font-size: 64%;
     font-weight: 200;
+  }
+}
+@media screen and (max-width: 323px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 80%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 .contact-me button {
+    padding: 8px 10px;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    width: 90%;
+    text-align: right;
+    /* font-size: 180%; */
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 60%;
+  }
+  .container .sub-container-1 .about-page .about-title h2,
+  .container .sub-container-2 .skills-page .skills-title h2,
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 220%;
+  }
+}
+@media screen and (max-width: 280px) {
+  .menu-btn .hamburger {
+    width: 30px;
+  }
+  .menu-list ul li a {
+    font-size: 100%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h2,
+  .container .sub-container-1 .home-page .content .left-content h1,
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    padding-left: 20px;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 100%;
+  }
+
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    font-size: 65%;
+    width: 100px;
+    height: 30px;
+  }
+  .container .sub-container-1 .about-page .about-title h2 {
+    font-size: 40%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 {
+    font-size: 65%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 .contact-me a {
+    padding: 0;
+    font-size: 55%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 55%;
+  }
+  .container .sub-container-1 .about-page .about-title h2,
+  .container .sub-container-2 .skills-page .skills-title h2,
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 100%;
   }
 }
 /* ------------------ mobile responsive code ends here ------------------ */
