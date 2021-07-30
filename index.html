@@ -116,7 +116,9 @@
               I'm always open to adapt to work with team and work on new
               frontend skills and technology.
               <div class="contact-me">
-                <a href="Swapnil-CV.pdf" target="_blank" class="download-cv">download.cv</a>
+                <a href="Swapnil-CV.pdf" target="_blank" class="download-cv"
+                  >download.cv
+                </a>
                 <a href="#contact">contact me </a>
               </div>
             </h3>
@@ -165,7 +167,7 @@
           <div class="contact-title"><h2>Contact</h2></div>
           <div class="contact-content">
             <!-- <h1>Get In Touch</h1> -->
-            <form>
+            <form action="POST" data-netlify="true">
               <div class="heading"><h1>Get In Touch</h1></div>
               <div class="contact-form">
                 <div class="contact-data">
@@ -175,12 +177,14 @@
                       name="name"
                       id="customer-name"
                       placeholder="Name"
+                      required
                     />
                     <input
                       type="email"
                       name="email"
                       id="customer-email"
                       placeholder="Email"
+                      required
                     />
                   </div>
                   <div class="customer-message">
@@ -188,10 +192,11 @@
                       name="message"
                       id="customer-message"
                       placeholder="Message here ..."
+                      required
                     ></textarea>
                   </div>
                   <div class="send-message">
-                    <button>Send</button>
+                    <input class="submit_btn" type="submit"></input>
                   </div>
                 </div>
               </div>
@@ -236,8 +241,4 @@
     </script>
   </body>
 </html>
-<!-- 
-issue : home page content under know more button for zenfone5
-contact form ->  do name n email box width 100% and input font size decrease
 
-  -->
