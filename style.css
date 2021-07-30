@@ -727,7 +727,7 @@ body::-webkit-scrollbar {
   .contact-form
   .contact-data
   .send-message
-  button {
+  input {
   height: 60%;
   width: 100%;
   font-family: "Cairo", sans-serif;
@@ -747,7 +747,7 @@ body::-webkit-scrollbar {
   .contact-form
   .contact-data
   .send-message
-  button:hover {
+  input:hover {
   font-weight: 600;
   background-color: #edc681;
   color: black;
@@ -1217,7 +1217,7 @@ body::-webkit-scrollbar {
     .contact-form
     .contact-data
     .send-message
-    button {
+    input {
     height: 70%;
     width: 100%;
     font-size: 90%;
@@ -1438,7 +1438,7 @@ body::-webkit-scrollbar {
     .contact-form
     .contact-data
     .send-message
-    button {
+    input {
     height: 70%;
     width: 100%;
     font-size: 80%;
@@ -1698,7 +1698,7 @@ body::-webkit-scrollbar {
     .contact-form
     .contact-data
     .send-message
-    button {
+    input {
     height: 70%;
     width: 40%;
     font-size: 70%;
@@ -1908,7 +1908,7 @@ body::-webkit-scrollbar {
     .contact-form
     .contact-data
     .send-message
-    button {
+    input {
     height: 70%;
     width: 100%;
     font-size: 70%;
@@ -2174,7 +2174,7 @@ body::-webkit-scrollbar {
     .contact-form
     .contact-data
     .send-message
-    button {
+    input {
     height: 70%;
     width: 100%;
     font-size: 70%;
