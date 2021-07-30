@@ -1596,8 +1596,8 @@ body::-webkit-scrollbar {
     transform: scale(0.9, 0.9);
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    height: 85%;
-    padding: 20px 15px;
+    height: 100%;
+    padding: 0px 15px;
     font-size: 115%;
     line-height: 1.8;
   }
@@ -1808,7 +1808,7 @@ body::-webkit-scrollbar {
     transform: scale(0.9, 0.9);
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    padding: 15px 15px 0px 15px;
+    padding: 0px 15px 0px 15px;
     font-size: 100%;
     line-height: 1.8;
   }
@@ -2023,8 +2023,8 @@ body::-webkit-scrollbar {
     align-items: flex-start;
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    height: 85%;
-    padding: 15px 15px 0px 15px;
+    height: 100%;
+    padding: 0px 15px 0px 15px;
     font-size: 88%;
   }
   .container
@@ -2231,7 +2231,7 @@ body::-webkit-scrollbar {
     align-items: flex-start;
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    padding: 15px 15px 0 15px;
+    padding: 0px 15px 0 15px;
     font-size: 85%;
   }
   .container
@@ -2268,7 +2268,7 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
     font-size: 83%;
-    padding: 15px 15px 0px 15px;
+    padding: 0px 15px 0px 15px;
   }
   .container
     .sub-container-1
@@ -2314,8 +2314,8 @@ body::-webkit-scrollbar {
     transform: scale(0.9, 0.9);
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
-    height: 85%;
-    padding: 15px 15px 0 15px;
+    height: 100%;
+    padding: 0px 15px 0 15px;
     font-size: 80%;
     line-height: 1.8;
   }
