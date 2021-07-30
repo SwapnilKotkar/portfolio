@@ -2018,7 +2018,7 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-1 .home-page .content .right-content .intro {
     height: 85%;
-    width: 100%;
+    width: 90%;
     justify-content: center;
     align-items: flex-start;
   }
@@ -2226,7 +2226,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 412px) {
   .container .sub-container-1 .home-page .content .right-content .intro {
     height: 85%;
-    width: 100%;
+    width: 90%;
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -2264,6 +2264,7 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-1 .home-page .content .right-content .intro {
     height: 90%;
+    width: 90%;
   }
   .container .sub-container-1 .home-page .content .right-content .intro h3 {
     font-size: 83%;
@@ -2307,7 +2308,7 @@ body::-webkit-scrollbar {
   }
   .container .sub-container-1 .home-page .content .right-content .intro {
     height: 90%;
-    width: 100%;
+    width: 90%;
     justify-content: flex-start;
     align-items: flex-start;
     transform: scale(0.9, 0.9);
