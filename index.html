@@ -23,6 +23,12 @@
       src="https://kit.fontawesome.com/9c668c8ddc.js"
       crossorigin="anonymous"
     ></script>
+    <!-- ANIMATION Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>portfolio</title>
   </head>
@@ -50,14 +56,32 @@
           <div class="content">
             <div class="left-content">
               <!-- <div class="intro"> -->
-              <h2>Hello, I'm</h2>
-              <h1>Swapnil</h1>
-              <h1>Kotkar</h1>
-              <h3>frontend developer</h3>
+              <h2 class="animate__animated animate__slideInLeft">Hello, I'm</h2>
+              <h1
+                class="
+                  animate__animated animate__slideInLeft animate__delay-0.5s
+                "
+              >
+                Swapnil
+              </h1>
+              <h1
+                class="
+                  animate__animated animate__slideInLeft animate__delay-0.5s
+                "
+              >
+                Kotkar
+              </h1>
+              <h3
+                class="
+                  animate__animated animate__slideInLeft animate__delay-0.5s
+                "
+              >
+                frontend developer
+              </h3>
               <!-- </div> -->
             </div>
             <div class="right-content">
-              <div class="intro">
+              <div class="intro animate__animated animate__fadeInUp">
                 <h3>
                   <span>&emsp; &emsp; &emsp;&emsp;</span> I design and build
                   quality responsive websites, clean user interfaces and rich
@@ -71,14 +95,14 @@
                   UI challenges and provide value to the growth of an
                   organization.
                 </h3>
-<!--                 <div class="contact-me">
+                <!-- <div class="contact-me">
                   <a href="#about">know more </a>
                 </div> -->
               </div>
             </div>
           </div>
         </div>
-        <div class="about-page" id="about">
+        <div class="about-page" data-aos="zoom-in" id="about">
           <div class="about-title"><h2>About Me</h2></div>
           <div class="about-content">
             <h3>
@@ -100,7 +124,7 @@
         </div>
       </div>
       <div class="sub-container-2">
-        <div class="skills-page" id="skills">
+        <div class="skills-page" data-aos="zoom-in" id="skills">
           <div class="skills-content">
             <div class="skills-list">
               <div class="html">
@@ -137,7 +161,7 @@
           </div>
           <div class="skills-title"><h2>Skill Sets</h2></div>
         </div>
-        <div class="contact-page" id="contact">
+        <div class="contact-page" data-aos="zoom-in" id="contact">
           <div class="contact-title"><h2>Contact</h2></div>
           <div class="contact-content">
             <!-- <h1>Get In Touch</h1> -->
@@ -204,6 +228,12 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>
 <!-- 
