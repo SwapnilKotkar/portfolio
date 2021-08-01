@@ -1,362 +1,2580 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: black;
+  font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
 }
-body {
-  background-color: lightblue;
+
+/* --------------------premium gold #edc681------------------- */
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------ hamburger-menu css starts here ----------------  */
+.menu-btn {
+  cursor: pointer;
+  height: 55px;
+  width: 55px;
+  position: fixed;
+  top: 30px;
+  left: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  cursor: pointer;
+  z-index: 15;
 }
-.container {
-  position: relative;
+.menu-btn .hamburger {
+  background-color: whitesmoke;
+  height: 3px;
+  width: 50px;
+  transition: 0.5s;
+}
+.menu-btn .hamburger::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: 3px;
+  transform: translateY(-8px);
+  background-color: whitesmoke;
+  transition: 0.5s;
+}
+.menu-btn .hamburger::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: 3px;
+  transform: translateY(8px);
+  background-color: whitesmoke;
+  transition: 0.5s;
+}
+/* -------------hamburger menu ANIMATION starts here----------------- */
+.menu-btn.active {
+  background-color: #edc681;
+  transition: 0.3s;
+}
+.menu-btn .hamburger.active {
+  background-color: transparent;
+  opacity: 1;
+  transition: 0.3s;
+}
+.menu-btn .hamburger.active::before {
+  background-color: black;
+  transform: translateY(0px) rotate(-45deg);
+  transition: 0.5s;
+  opacity: 1;
+}
+.menu-btn .hamburger.active::after {
+  background-color: black;
+  transform: translateY(0px) rotate(45deg);
+  transition: 0.5s;
+  opacity: 1;
+}
+/* -------------hamburger menu ANIMATION ends here----------------- */
+
+.menu-list {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: rgba(237, 198, 129, 1); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-image: url(./images/hex.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s all ease-in-out;
+}
+.menu-list ul {
   width: 100%;
-  max-width: 1000px;
-  min-height: 1000px;
-  margin: 0px;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  list-style: none;
 }
-.container .left_side {
+.menu-list ul li a {
+  color: #edc681;
+  font-size: 250%;
+  font-weight: 500;
+  text-decoration: none;
   position: relative;
-  background-color: #003147;
-  padding: 20px;
 }
-.profiletext {
-  position: relative;
+.menu-list ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: whitesmoke;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.menu-list ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.menu-list.active {
+  left: 0vw;
+}
+/* ------------ hamburger-menu css ends here ----------------  */
+
+/* ------------main content css starts here-------------------- */
+
+.container {
+  height: 400vh;
+  width: 100vw;
+  background-image: url(./images/hex.svg);
+  background-attachment: fixed;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.profiletext .image {
-  position: relative;
-  width: 100px;
-  height: 100px;
+.container .sub-container-1,
+.container .sub-container-2 {
+  height: 200vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .sub-container-1 .home-page,
+.container .sub-container-1 .about-page,
+.container .sub-container-2 .skills-page,
+.container .sub-container-2 .contact-page {
+  height: 50%;
+  width: 100%;
+}
+
+.container .sub-container-2 .skills-page {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* ------------main content css ends here-------------------- */
+
+/* --------------home page css starts here-----------------  */
+.container .sub-container-1 .home-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  border: 3px solid #00aeff;
-  background-color: whitesmoke;
-
-  overflow: hidden;
 }
-.profiletext .image h1 {
-  font-size: 40px;
-  color: #00aeff;
+.container .sub-container-1 .home-page .content {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #edc681; */
 }
-.profiletext .image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.container .sub-container-1 .home-page .content .left-content {
+  width: 50%;
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #edc681; */
 }
-.profiletext h2 {
-  color: #fff;
-  font-size: 1.2em;
-  margin-top: 15px;
-  text-transform: uppercase;
-  text-align: center;
+
+.container .sub-container-1 .home-page .content .right-content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* background-color: #222831; */
+}
+.container .sub-container-1 .home-page .content .right-content .intro {
+  height: 50%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(34, 40, 49, 0.9);
+}
+
+.container .sub-container-1 .home-page .content .right-content .intro h3 {
+  max-height: 90%;
+  width: 100%;
+  padding: 10px 20px;
+  color: whitesmoke;
+  font-size: 120%;
+  font-family: "Cairo", sans-serif;
+  font-weight: 200;
+  text-align: justify;
+}
+.container
+  .sub-container-1
+  .home-page
+  .content
+  .right-content
+  .intro
+  h3
+  .coding {
+  font-size: 90%;
+  background-color: whitesmoke;
+  color: black;
+  font-weight: bold;
+  padding: 0 1px;
+  margin-right: 2px;
+}
+
+.container
+  .sub-container-1
+  .home-page
+  .content
+  .right-content
+  .intro
+  .contact-me {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0 10px 20px;
+}
+.container
+  .sub-container-1
+  .home-page
+  .content
+  .right-content
+  .intro
+  .contact-me
+  a {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cairo", sans-serif;
   font-weight: 600;
-  line-height: 1.2em;
-}
-.profiletext h2 span {
-  font-size: 0.7em;
-  font-weight: 300;
-}
-.contactInfo,
-.skills,
-.frameworks,
-.softwares,
-.coding_platforms {
-  padding-top: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.title {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-.contactInfo ul {
-  position: relative;
-}
-.contactInfo ul li {
-  position: relative;
-  list-style: none;
-  max-width: 7px 0;
-  margin-bottom: 5px;
+  font-size: 90%;
+  text-decoration: none;
+  background-color: #edc681;
+  border: 1px solid transparent;
+  color: black;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
-.contactInfo ul li .icon {
-  display: inline-block;
-  width: 20px;
-  font-size: 15px;
-  color: #03a9f4;
-}
-.contactInfo ul li span {
-  color: #fff;
-  font-weight: 300;
-  font-size: 12px;
-}
-.skills ul li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.skills ul li .percent {
-  background-color: #00aeff;
-  height: 5px;
-  width: 50%;
-}
-.skills ul li .percent .html {
-  height: 5px;
-  width: 80%;
-  background-color: whitesmoke;
-}
-.skills ul li .percent .css {
-  height: 5px;
-  width: 70%;
-  background-color: whitesmoke;
-}
-.skills ul li .percent .js {
-  height: 5px;
-  width: 60%;
-  background-color: whitesmoke;
-}
-.skills ul li .percent .java {
-  height: 5px;
-  width: 60%;
-  background-color: whitesmoke;
-}
-.skills ul li .percent .python {
-  height: 5px;
-  width: 30%;
-  background-color: whitesmoke;
-}
-.skills ul li h4 {
-  width: 35%;
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.skills ul li h3 {
-  width: 10%;
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.frameworks ul li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.frameworks ul li .percent {
-  background-color: #00aeff;
-  height: 5px;
-  width: 50%;
-}
-.frameworks ul li .percent .bootstrap {
-  height: 5px;
-  width: 50%;
-  background-color: whitesmoke;
-}
-.frameworks ul li .percent .reactjs {
-  height: 5px;
-  width: 50%;
-  background-color: whitesmoke;
-}
-.frameworks ul li h4 {
-  width: 35%;
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.frameworks ul li h3 {
-  width: 10%;
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.softwares ul li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.softwares ul li .percent {
-  background-color: #00aeff;
-  height: 5px;
-  width: 50%;
-}
-.softwares ul li .percent .vscode {
-  height: 5px;
-  width: 70%;
-  background-color: whitesmoke;
-}
-.softwares ul li .percent .netbeans {
-  height: 5px;
-  width: 60%;
-  background-color: whitesmoke;
-}
-.softwares ul li h4 {
-  width: 35%;
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.softwares ul li h3 {
-  width: 10%;
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.social ul li {
-  display: flex;
-  flex-direction: column;
-}
-.social ul li h4 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.social ul li h3 {
-  color: #00aeff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.coding_platforms ul li {
-  display: flex;
-  flex-direction: column;
-}
-.coding_platforms ul li h4 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.coding_platforms ul li h3 {
-  color: #00aeff;
-  font-weight: 400;
-  font-size: 12px;
-}
-.languages ul li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.languages ul li h4 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-  width: 100%;
-}
-.languages ul li h3 {
-  color: #00aeff;
-  font-weight: 400;
-  font-size: 12px;
-  width: 10%;
-}
-.languages ul li .percent {
-  background-color: #00aeff;
-  height: 6px;
-  width: 50%;
-}
-.languages ul li .percent .english {
-  height: 5px;
-  width: 70%;
-  background-color: whitesmoke;
-}
-.languages ul li .percent .marathi {
-  height: 5px;
-  width: 100%;
-  background-color: whitesmoke;
-}
-.languages ul li .percent .hindi {
-  height: 5px;
-  width: 80%;
-  background-color: whitesmoke;
-}
-.languages ul li h3 {
-  width: 10%;
-  color: #fff;
-  font-weight: 400;
-  font-size: 12px;
-}
-/*------------------------------------------------------  */
-.container .right_side {
-  position: relative;
-  background-color: #fff;
-  padding: 40px;
-}
-.right_side .title2 {
-  font-size: 20px;
-}
-.container .right_side p,
-.container .right_side h5,
-.container .right_side h4 {
-  font-size: 15px;
-}
-.right_side .interest p {
-  line-height: 1;
-}
-.about {
-  margin-bottom: 15px;
-}
-.about:last-child {
-  margin-bottom: 0;
-}
-.title2 {
-  color: #003147;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0px;
-}
-p {
-  color: #333;
-}
-.about .box {
-  display: flex;
-  flex-direction: row;
-  margin: 10px 0;
-}
-.about .box .year {
-  min-width: 150px;
-  display: flex;
-  align-items: center;
+.container
+  .sub-container-1
+  .home-page
+  .content
+  .right-content
+  .intro
+  .contact-me
+  a:hover {
+  font-weight: 600;
+  color: whitesmoke;
+  border: 1px solid #edc681;
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
 }
 
-.about .box .year h5 {
-  text-transform: uppercase;
-  color: #848c90;
-  font-weight: 600;
+.container .sub-container-1 .home-page .content .left-content h2 {
+  width: 100%;
+  font-size: 180%;
+  color: whitesmoke;
+  font-family: "Orbitron", sans-serif;
+  text-align: left;
 }
-.about .box .text h4 {
-  color: #2a7da2;
-  font-size: 16px;
+.container .sub-container-1 .home-page .content .left-content h1 {
+  width: 100%;
+  font-size: 700%;
+  color: #edc681;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 4px;
+  text-align: left;
 }
-.hobbies .icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.container .sub-container-1 .home-page .content .left-content h3 {
+  width: 100%;
+  font-size: 180%;
+  color: whitesmoke;
+  font-family: "Orbitron", sans-serif;
+  text-align: right;
 }
-.hobbies i {
-  height: 70px;
-  width: 70px;
-  font-size: 20px;
-  margin: 20px;
-  background-color: #d4ebf5;
-  list-style: none;
+
+/* --------------home page css ends here-----------------  */
+
+/* --------------about page css starts here-----------------  */
+.container .sub-container-1 .about-page {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.container .sub-container-1 .about-page .about-title {
+  width: 20%;
+  height: 90%;
+  background-color: #edc681;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .sub-container-1 .about-page .about-title h2 {
+  font-weight: 700;
+  text-decoration: underline 5px whitesmoke;
+  font-size: 700%;
+  color: black;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+.container .sub-container-1 .about-page .about-content {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(34, 40, 49, 0.9);
+}
+.container .sub-container-1 .about-page .about-content h3 {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  font-size: 120%;
+  text-align: left;
+  color: whitesmoke;
+}
+.container .sub-container-1 .about-page .about-content h3 .contact-me {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .sub-container-1 .about-page .about-content h3 .contact-me a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 50px;
+  width: 160px;
+  margin-left: 20px;
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
+  font-size: 100%;
+  padding: 10px 30px;
+  background-color: #edc681;
+  border: 1px solid transparent;
+  color: black;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container
+  .sub-container-1
+  .about-page
+  .about-content
+  h3
+  .contact-me
+  .download-cv {
+  background: none;
+  color: #edc681;
+  text-decoration: underline 1px #edc681;
+}
+.container
+  .sub-container-1
+  .about-page
+  .about-content
+  h3
+  .contact-me
+  button:hover {
+  font-weight: 600;
+  color: whitesmoke;
+  border: 1px solid #edc681;
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
+}
+
+/* --------------about page css ends here-----------------  */
+
+/* --------------skills page css starts here-----------------  */
+
+.container .sub-container-2 .skills-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .sub-container-2 .skills-page .skills-content {
+  width: 70%;
+  height: 90%;
+  background-color: rgba(34, 40, 49, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .sub-container-2 .skills-page .skills-title {
+  width: 20%;
+  height: 90%;
+  background-color: #edc681;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .sub-container-2 .skills-page .skills-title h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: underline 5px whitesmoke;
+  font-size: 700%;
+  color: black;
+  writing-mode: vertical-lr;
+}
+.container .sub-container-2 .skills-page .skills-content .skills-list {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .sub-container-2 .skills-page .skills-content .skills-list .html,
+.container .sub-container-2 .skills-page .skills-content .skills-list .css,
+.container .sub-container-2 .skills-page .skills-content .skills-list .js,
+.container .sub-container-2 .skills-page .skills-content .skills-list .reactjs,
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .bootstrap {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .sub-container-2 .skills-page .skills-content .skills-list h1 {
+  font-size: 150%;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: whitesmoke;
+  width: 100%;
+}
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .html
+  .percent,
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .css
+  .percent,
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .js
+  .percent,
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .reactjs
+  .percent,
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .bootstrap
+  .percent {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+}
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .html
+  .percent
+  div {
+  width: 95%;
+  height: 100%;
+  background-color: orangered;
+}
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .css
+  .percent
+  div {
+  width: 70%;
+  height: 100%;
+  background-color: cyan;
+}
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .js
+  .percent
+  div {
+  width: 60%;
+  height: 100%;
+  background-color: gold;
+}
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .reactjs
+  .percent
+  div {
+  width: 40%;
+  height: 100%;
+  background-color: plum;
+}
+.container
+  .sub-container-2
+  .skills-page
+  .skills-content
+  .skills-list
+  .bootstrap
+  .percent
+  div {
+  width: 50%;
+  height: 100%;
+  background-color: rebeccapurple;
+}
+
+/* --------------skills page css ends here-----------------  */
+
+/* --------------contact page css starts here-----------------  */
+
+.container .sub-container-2 .contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.container .sub-container-2 .contact-page .contact-title {
+  width: 20%;
+  height: 90%;
+  background-color: #edc681;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .sub-container-2 .contact-page .contact-content {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(34, 40, 49, 0.9);
+}
+.container .sub-container-2 .contact-page .contact-title h2 {
+  font-weight: 700;
+  text-decoration: underline 5px whitesmoke;
+  font-size: 700%;
+  color: black;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.container .sub-container-2 .contact-page .contact-content form {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: greenyellow; */
+}
+.container .sub-container-2 .contact-page .contact-content form .heading {
+  height: 30%;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.container .sub-container-2 .contact-page .contact-content form .heading h1 {
+  font-size: 200%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  text-align: left;
+}
+.container .sub-container-2 .contact-page .contact-content form .contact-form {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  form
+  .contact-form
+  .contact-data {
+  width: 80%;
+  height: 70%;
+  padding: 0 5px;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  form
+  .contact-form
+  .contact-data
+  .customer-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  form
+  .contact-form
+  .contact-data
+  .customer-details
+  input {
+  width: 49.5%;
+  height: 60%;
+  border: 1px solid #edc681;
+  /* background-color: #222831; */
+  background-color: rgba(23, 23, 23, 0.5);
+  padding: 10px;
+  color: whitesmoke;
+}
+
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  form
+  .contact-form
+  .contact-data
+  .customer-message {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  form
+  .contact-form
+  .contact-data
+  .customer-message
+  textarea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #edc681;
+  background-color: rgba(23, 23, 23, 0.5);
+  padding: 10px;
+  color: whitesmoke;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  form
+  .contact-form
+  .contact-data
+  .send-message {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  form
+  .contact-form
+  .contact-data
+  .send-message
+  input {
+  height: 60%;
+  width: 100%;
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
+  font-size: 90%;
+  color: #edc681;
+  background-color: black;
+  border: 1px solid #edc681;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  form
+  .contact-form
+  .contact-data
+  .send-message
+  input:hover {
+  font-weight: 600;
+  background-color: #edc681;
+  color: black;
+  border: 1px solid black;
+  transition: 0.5s ease-in-out;
+}
+
+.container .sub-container-2 .contact-page .contact-content .contact-us {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .sub-container-2 .contact-page .contact-content .contact-us .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* filter: blur(100px); */
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .heading {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .heading
+  h2 {
+  font-size: 150%;
+  color: #edc681;
+  border-bottom: 2px solid #edc681;
+  border-width: 50%;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75%;
+  width: 100%;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details
+  .email,
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details
+  .phone,
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details
+  .address {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details
+  .email
+  .email-logo,
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details
+  .phone
+  .phone-logo,
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details
+  .address
+  .address-logo {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details
+  .email
+  .email-details,
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details
+  .phone
+  .phone-details,
+.container
+  .sub-container-2
+  .contact-page
+  .contact-content
+  .contact-us
+  .info
+  .contact-details
+  .address
+  .address-details {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+}
+
+/* --------------contact page css ends here-----------------  */
+
+/* ------------------ mobile responsive code starts here ------------------ */
+@media screen and (max-width: 1680px) {
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 50%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    height: 80%;
+    font-size: 110%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 1580px) {
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 1455px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 100%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 75%;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .menu-list ul li a {
+    font-size: 200%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h2 {
+    font-size: 130%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h1 {
+    font-size: 500%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 130%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 50%;
+    width: 90%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    height: 80%;
+    padding: 20px;
+    color: whitesmoke;
+    font-size: 101%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    width: 100%;
+    height: 15%;
+    padding: 0 0 10px 20px;
+  }
+  .container .sub-container-1 .about-page .about-title h2 {
+    font-size: 500%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 {
+    font-size: 110%;
+  }
+  .container .sub-container-2 .skills-page .skills-title h2 {
+    font-size: 500%;
+  }
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 500%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading h1 {
+    font-size: 170%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 70%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .menu-list ul li a {
+    font-size: 200%;
+  }
+  .container .sub-container-1 .home-page .content {
+    width: 95%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h2 {
+    font-size: 110%;
+    padding-left: 60px;
+  }
+  .container .sub-container-1 .home-page .content .left-content h1 {
+    font-size: 400%;
+    padding-left: 60px;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    padding-left: 60px;
+    font-size: 110%;
+    width: 50%;
+    text-align: left;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    width: 85%;
+    height: 50%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    height: 80%;
+    padding: 7px 20px;
+    font-size: 95%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    height: 15%;
+    width: 100%;
+    padding: 0 0 10px 20px;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    font-size: 80%;
+  }
+  .container .sub-container-1 .about-page .about-title h2 {
+    font-size: 500%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 {
+    width: 80%;
+    font-size: 110%;
+  }
+  .container .sub-container-2 .skills-page .skills-title h2 {
+    font-size: 500%;
+  }
+  .container .sub-container-2 .skills-page .skills-content .skills-list h1 {
+    font-size: 90%;
+  }
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 500%;
+  }
+  .container .sub-container-2 .contact-page .contact-content {
+    flex-direction: column-reverse;
+  }
+  .container .sub-container-2 .contact-page .contact-content form {
+    height: 50%;
+    width: 100%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading {
+    height: 15%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form {
+    height: 85%;
+  }
+  .container .sub-container-2 .contact-page .contact-content .contact-us {
+    width: 100%;
+    height: 50%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading h1 {
+    font-size: 150%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data {
+    width: 90%;
+    height: 90%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .customer-details
+    input {
+    width: 49%;
+    height: 80%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .send-message
+    input {
+    height: 70%;
+    width: 100%;
+    font-size: 90%;
+  }
+
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .heading
+    h2 {
+    font-size: 140%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 90%;
+    font-weight: 200;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 100%;
+    width: 80%;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 1117px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 94%;
+  }
+}
+@media screen and (max-width: 1055px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 91%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container .sub-container-1 .home-page .content {
+    width: 95%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h2 {
+    font-size: 100%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h1 {
+    font-size: 300%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 100%;
+    width: 60%;
+    text-align: left;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    width: 95%;
+    height: 50%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    height: 80%;
+    padding: 15px 20px;
+    font-size: 92%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    h3
+    .coding {
+    font-size: 90%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    height: 50px;
+    width: 100px;
+    width: 100%;
+    padding: 0 0 10px 20px;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    height: 90%;
+    font-size: 80%;
+  }
+  .container .sub-container-1 .about-page .about-title h2 {
+    font-size: 400%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 {
+    width: 80%;
+    font-size: 100%;
+  }
+  .container .sub-container-2 .skills-page .skills-title h2 {
+    font-size: 400%;
+  }
+  .container .sub-container-2 .skills-page .skills-content .skills-list h1 {
+    font-size: 80%;
+  }
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 400%;
+  }
+  .container .sub-container-2 .contact-page .contact-content {
+    flex-direction: column-reverse;
+  }
+  .container .sub-container-2 .contact-page .contact-content form {
+    height: 50%;
+    width: 100%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading {
+    height: 15%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form {
+    height: 85%;
+  }
+  .container .sub-container-2 .contact-page .contact-content .contact-us {
+    width: 100%;
+    height: 50%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading h1 {
+    font-size: 150%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data {
+    width: 90%;
+    height: 90%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .customer-details
+    input {
+    width: 49%;
+    height: 80%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .send-message
+    input {
+    height: 70%;
+    width: 100%;
+    font-size: 80%;
+  }
+
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .heading
+    h2 {
+    font-size: 140%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 85%;
+    width: 50%;
+    font-weight: 200;
+  }
+}
+@media screen and (max-width: 970px) {
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    width: 80%;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 955px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 908px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 85%;
+  }
+}
+@media screen and (max-width: 815px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .sub-container-1 .home-page .content .left-content h2 {
+    font-size: 90%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h1 {
+    font-size: 260%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 90%;
+    width: 100%;
+    text-align: center;
+  }
+  .container .sub-container-1 .home-page .content {
+    flex-direction: column;
+  }
+  .container .sub-container-1 .home-page .content .left-content {
+    width: 100%;
+    height: 40%;
+  }
+  .container .sub-container-1 .home-page .content .right-content {
+    height: 60%;
+    width: 100%;
+    justify-content: center;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 85%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 125%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    height: 40px;
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 718px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 110%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 .contact-me a {
+    padding: 0;
+    font-size: 85%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container .sub-container-1 .home-page .content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+  }
+  .container .sub-container-1 .home-page .content .left-content {
+    width: 100%;
+    height: 30%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+  .container .sub-container-1 .home-page .content .left-content h2 {
+    font-size: 100%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h1 {
+    font-size: 260%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 100%;
+    width: 70%;
+    text-align: left;
+  }
+  .container .sub-container-1 .home-page .content .right-content {
+    width: 100%;
+    height: 60%;
+    align-items: flex-start;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 75%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    transform: scale(0.9, 0.9);
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    height: 100%;
+    padding: 0px 15px;
+    font-size: 115%;
+    line-height: 1.8;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    h3
+    .coding {
+    font-size: 95%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    width: 100%;
+    height: 10%;
+    padding: 0 0 10px 20px;
+  }
+  .container .sub-container-1 .about-page .about-title h2 {
+    font-size: 280%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 {
+    font-size: 100%;
+    width: 91%;
+    text-align: left;
+  }
+  .container .sub-container-1 .about-page .about-content h3 .contact-me button {
+    padding: 8px 15px;
+    font-size: 70%;
+  }
+  .container .sub-container-2 .skills-page .skills-title h2 {
+    font-size: 280%;
+  }
+  .container .sub-container-2 .skills-page .skills-content .skills-list h1 {
+    font-size: 85%;
+  }
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 280%;
+  }
+  .container .sub-container-2 .contact-page .contact-content {
+    flex-direction: column-reverse;
+  }
+  .container .sub-container-2 .contact-page .contact-content form {
+    height: 50%;
+    width: 100%;
+  }
+
+  .container .sub-container-2 .contact-page .contact-content .contact-us {
+    width: 100%;
+    height: 50%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading {
+    height: 15%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form {
+    height: 85%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading h1 {
+    font-size: 140%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data {
+    width: 90%;
+    height: 90%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .customer-details
+    input {
+    width: 49%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .send-message
+    input {
+    height: 70%;
+    width: 40%;
+    font-size: 70%;
+  }
+
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .heading
+    h2 {
+    font-size: 110%;
+  }
+
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 90%;
+    width: 80%;
+    font-weight: 200;
+  }
+}
+@media screen and (max-width: 535px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 110%;
+  }
+}
+@media screen and (max-width: 513px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 105%;
+  }
+}
+@media screen and (max-width: 485px) {
+  .menu-btn .hamburger {
+    width: 40px;
+  }
+  .menu-list ul li a {
+    font-size: 150%;
+  }
+  .container {
+    height: 400vh;
+    width: 100vw;
+    background-image: url(./images/hex.svg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .container .sub-container-1 .home-page .content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+  }
+  .container .sub-container-1 .home-page .content .left-content {
+    width: 100%;
+    height: 30%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+  .container .sub-container-1 .home-page .content .left-content h2 {
+    font-size: 80%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h1 {
+    font-size: 220%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 80%;
+    width: 70%;
+    text-align: left;
+  }
+  .container .sub-container-1 .home-page .content .right-content {
+    width: 100%;
+    height: 60%;
+    align-items: flex-start;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 75%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: scale(0.9, 0.9);
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    padding: 0px 15px 0px 15px;
+    font-size: 100%;
+    line-height: 1.8;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    h3
+    .coding {
+    font-size: 85%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    width: 100%;
+    height: 15%;
+  }
+  .container .sub-container-1 .about-page .about-title h2 {
+    font-size: 280%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 {
+    font-size: 85%;
+    width: 91%;
+    text-align: left;
+  }
+  .container .sub-container-1 .about-page .about-content h3 .contact-me button {
+    padding: 8px 15px;
+    font-size: 70%;
+  }
+  .container .sub-container-2 .skills-page .skills-title h2 {
+    font-size: 280%;
+  }
+  .container .sub-container-2 .skills-page .skills-content .skills-list h1 {
+    font-size: 65%;
+  }
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 280%;
+  }
+  .container .sub-container-2 .contact-page .contact-content {
+    flex-direction: column-reverse;
+  }
+  .container .sub-container-2 .contact-page .contact-content form {
+    height: 50%;
+    width: 100%;
+  }
+
+  .container .sub-container-2 .contact-page .contact-content .contact-us {
+    width: 100%;
+    height: 50%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading {
+    height: 15%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form {
+    height: 85%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading h1 {
+    font-size: 100%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data {
+    width: 90%;
+    height: 90%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .customer-details
+    input {
+    width: 49%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .send-message
+    input {
+    height: 70%;
+    width: 100%;
+    font-size: 70%;
+  }
+
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .heading
+    h2 {
+    font-size: 110%;
+  }
+
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 70%;
+    width: 80%;
+    font-weight: 200;
+  }
+}
+@media screen and (max-width: 466px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 100%;
+  }
+}
+@media screen and (max-width: 433px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 95%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .menu-btn {
+    top: 20px;
+    left: 20px;
+    height: 40px;
+    width: 40px;
+  }
+  .menu-btn .hamburger {
+    width: 40px;
+  }
+  .menu-list ul li a {
+    font-size: 150%;
+  }
+  .container {
+    height: 400vh;
+    width: 100vw;
+    background-image: url(./images/hex.svg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .container .sub-container-1 .home-page .content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+  }
+  .container .sub-container-1 .home-page .content .left-content {
+    width: 100%;
+    height: 30%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+  .container .sub-container-1 .home-page .content .left-content h2 {
+    font-size: 70%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h1 {
+    font-size: 200%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 70%;
+    width: 70%;
+    text-align: left;
+  }
+  .container .sub-container-1 .home-page .content .right-content {
+    width: 100%;
+    height: 50%;
+    align-items: flex-start;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 85%;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    height: 100%;
+    padding: 0px 15px 0px 15px;
+    font-size: 88%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    h3
+    .coding {
+    font-size: 95%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    width: 100%;
+    height: 10%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 15px;
+    font-size: 88%;
+  }
+  .container .sub-container-1 .about-page .about-title h2 {
+    font-size: 280%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 {
+    font-size: 85%;
+    width: 91%;
+    text-align: left;
+  }
+  .container .sub-container-1 .about-page .about-content h3 .contact-me a {
+    font-size: 70%;
+    padding: 0;
+    width: 140px;
+    height: 35px;
+  }
+  .container .sub-container-2 .skills-page .skills-title h2 {
+    font-size: 280%;
+  }
+  .container .sub-container-2 .skills-page .skills-content .skills-list h1 {
+    font-size: 65%;
+  }
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 280%;
+  }
+  .container .sub-container-2 .contact-page .contact-content {
+    flex-direction: column-reverse;
+  }
+  .container .sub-container-2 .contact-page .contact-content form {
+    height: 50%;
+    width: 100%;
+  }
+  .container .sub-container-2 .contact-page .contact-content .contact-us {
+    width: 100%;
+    height: 50%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading {
+    height: 15%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form {
+    height: 85%;
+  }
+  .container .sub-container-2 .contact-page .contact-content form .heading h1 {
+    font-size: 100%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data {
+    width: 90%;
+    height: 90%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .customer-details {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .customer-details
+    input {
+    width: 100%;
+    height: 40%;
+    font-size: 70%;
+  }
+
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .customer-message {
+    height: 50%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .customer-message
+    textarea {
+    font-size: 70%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    form
+    .contact-form
+    .contact-data
+    .send-message
+    input {
+    height: 70%;
+    width: 100%;
+    font-size: 70%;
+  }
+
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .heading
+    h2 {
+    font-size: 110%;
+  }
+
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 70%;
+    width: 80%;
+    font-weight: 200;
+  }
+}
+@media screen and (max-width: 412px) {
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 85%;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    padding: 0px 15px 0 15px;
+    font-size: 85%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    width: 100%;
+    height: 10%;
+  }
+}
+@media screen and (max-width: 399px) {
+  .container .sub-container-1 .home-page .content .left-content h2 {
+    font-size: 70%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h1 {
+    font-size: 200%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 70%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 95%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: scale(0.9, 0.9);
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 90%;
+    width: 90%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 83%;
+    padding: 0px 15px 0px 15px;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    width: 100%;
+    height: 10%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .container .sub-container-1 .home-page .content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+  }
+  .container .sub-container-1 .home-page .content .left-content {
+    width: 100%;
+    height: 30%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+  .container .sub-container-1 .home-page .content .left-content h2 {
+    font-size: 60%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h1 {
+    font-size: 180%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    font-size: 60%;
+    width: 70%;
+    text-align: left;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 90%;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: scale(0.9, 0.9);
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    height: 100%;
+    padding: 0px 15px 0 15px;
+    font-size: 80%;
+    line-height: 1.8;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    width: 100%;
+    height: 10%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    font-size: 89%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 67%;
+    font-weight: 200;
+  }
+}
+@media screen and (max-width: 414px) and (max-height: 736px) {
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 90%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 82%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    font-size: 82%;
+  }
+}
+@media screen and (width: 375px) and (height: 667px) {
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 90%;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 75%;
+  }
+}
+@media screen and (max-width: 368px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    height: 87%;
+    font-size: 80%;
+    line-height: 1.8;
+    padding: 15px 15px 0px 15px;
+  }
+  .container .sub-container-1 .about-page .about-content h3 {
+    font-size: 80%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me {
+    width: 100%;
+    height: 15%;
+  }
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    font-size: 85%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 64%;
+    font-weight: 200;
+  }
+}
+@media screen and (max-width: 323px) {
+  .container .sub-container-1 .home-page .content .right-content .intro h3 {
+    font-size: 80%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 .contact-me button {
+    padding: 8px 10px;
+  }
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    width: 90%;
+    text-align: right;
+    /* font-size: 180%; */
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 60%;
+  }
+  .container .sub-container-1 .about-page .about-title h2,
+  .container .sub-container-2 .skills-page .skills-title h2,
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 220%;
+  }
+}
+@media screen and (max-width: 280px) {
+  .menu-btn .hamburger {
+    width: 30px;
+  }
+  .menu-list ul li a {
+    font-size: 100%;
+  }
+  .container .sub-container-1 .home-page .content .left-content h2,
+  .container .sub-container-1 .home-page .content .left-content h1,
+  .container .sub-container-1 .home-page .content .left-content h3 {
+    padding-left: 20px;
+  }
+  .container .sub-container-1 .home-page .content .right-content .intro {
+    height: 100%;
+  }
+
+  .container
+    .sub-container-1
+    .home-page
+    .content
+    .right-content
+    .intro
+    .contact-me
+    a {
+    font-size: 65%;
+    width: 100px;
+    height: 30px;
+  }
+  .container .sub-container-1 .about-page .about-title h2 {
+    font-size: 40%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 {
+    font-size: 65%;
+  }
+  .container .sub-container-1 .about-page .about-content h3 .contact-me a {
+    padding: 0;
+    font-size: 55%;
+  }
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .email
+    .email-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .phone
+    .phone-details,
+  .container
+    .sub-container-2
+    .contact-page
+    .contact-content
+    .contact-us
+    .info
+    .contact-details
+    .address
+    .address-details {
+    font-size: 55%;
+  }
+  .container .sub-container-1 .about-page .about-title h2,
+  .container .sub-container-2 .skills-page .skills-title h2,
+  .container .sub-container-2 .contact-page .contact-title h2 {
+    font-size: 100%;
+  }
+}
+/* ------------------ mobile responsive code ends here ------------------ */
