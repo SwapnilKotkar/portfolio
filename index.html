@@ -4,268 +4,241 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <!---------------------- CSS Stylesheets ------------------------------->
+    <link rel="stylesheet" href="style.css" />
+    <!---------------------- Fonts ------------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Domine:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ------------------ FonAwesome Icons ------------------------------ -->
     <script
       src="https://kit.fontawesome.com/9c668c8ddc.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Resume | Swapnil Kotkar</title>
+    <!-- ANIMATION Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>portfolio</title>
   </head>
   <body>
+    <!-- ------------------ hameburber menu coding starts here ----------------  -->
+    <div class="menu-btn">
+      <div class="hamburger"></div>
+    </div>
+    <div class="menu-list">
+      <ul class="menu-items">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- ------------------ hameburber menu coding ends here ----------------  -->
+
+    <!-- ------------------ main contents coding starts here ----------------  -->
+
     <div class="container">
-      <div class="left_side">
-        <div class="profiletext">
-          <div class="image">
-              <h1>SK</h1>
-            <!-- <img src="#" alt="profile_pic" /> -->
-          </div>
-          <h2>Swapnil Kotkar <br /><span>Frontend Developer</span></h2>
-        </div>
-        <div class="contactInfo">
-          <h3 class="title">Contact Info</h3>
-          <ul>
-            <li>
-              <span class="icon"><i class="fas fa-phone-square-alt"></i></span>
-              <span class="text">+91 95528 37403</span>
-            </li>
-            <li>
-              <span class="icon"><i class="fas fa-envelope"></i></span>
-              <span class="text">swapnilkotkar793@gmail.com</span>
-            </li> 
-            <li>
-              <span class="icon"><i class="fab fa-weebly"></i></span>
-              <span class="text">swapnilkotkar.netlify.app</span>
-            </li>
-            <li>
-              <span class="icon"><i class="fab fa-linkedin"></i></span>
-              <span class="text">linkedin.com/in/swapnilkotkar </span>
-            </li>
-            <li>
-              <span class="icon"><i class="fas fa-map"></i></span>
-              <span class="text">Pune, MH, India</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="contactInfo skills">
-          <h3 class="title">Skills</h3>
-          <ul>
-            <li>
-              <h4>HTML</h4>
-              <div class="percent"><div class="html"></div></div>
-              <h3>80%</h3>
-            </li>
-            <li>
-              <h4>CSS</h4>
-              <div class="percent"><div class="css"></div></div>
-              <h3>70%</h3>
-            </li>
-            <li>
-              <h4>JS</h4>
-              <div class="percent"><div class="js"></div></div>
-              <h3>60%</3>
-            </li>
-          
-          </ul>
-        </div>
-
-        <div class="contactInfo frameworks">
-            <h3 class="title">Frameworks</h3>
-            <ul>
-              <li>
-                <h4>Bootstrap</h4>
-                <div class="percent"><div class="bootstrap"></div></div>
-                <h3>50%</h3>
-              </li>
-              <li>
-                <h4>ReactJS</h4>
-                <div class="percent"><div class="reactjs"></div></div>
-                <h3>50%</h3>
-              </li>
-            </ul>
-          </div>
-
-          <div class="contactInfo softwares">
-            <h3 class="title">Softwares</h3>
-            <ul>
-              <li>
-                <h4>VS Code</h4>
-                <div class="percent"><div class="vscode"></div></div>
-                <h3>70%</h3>
-              </li>
-              <li>
-                <h4>Netbeans</h4>
-                <div class="percent"><div class="netbeans"></div></div>
-                <h3>60%</h3>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="contactInfo social">
-            <h3 class="title">Social</h3>
-            <ul>
-              <li>
-                <h4>Stack Overflow</h4>
-                <h3>tinyurl.com/cht7b979</h3>
-              </li>
-              <li>
-                <h4>GitHub</h4>
-                <h3>github.com/SwapnilKotkar</h3>
-              </li>
-            </ul>
-          </div>
-
-          <div class="contactInfo coding_platforms">
-            <h3 class="title">Coding profiles</h3>
-            <ul>
-              <li>
-                <h4>Geeksforgeeks</h4>
-                <h3>tinyurl.com/mn7urpwv</h3>
-              </li>
-              <li>
-                <h4>Codepen</h4>
-                <h3>codepen.io/swapnilkotkar</h3>
-              </li>
-              <!-- <li>
-                <h4>Leetcode</h4>
-                <h3>leetcode.com/Swapnilkotkar</h3>
-              </li> -->
-            </ul>
-          </div>
-
-          <div class="contactInfo languages">
-            <h3 class="title">Languages, Known</h3>
-            <ul>
-              <li>
-                <h4>English, Marathi, Hindi</h4>
-              </li>
-              <li>
-            </ul>
-          </div>
-        
-      </div>
-
-      <div class="right_side">
-          <div class="about">
-              <h2 class="title2">Profile</h2>
-              <p>Seeking an entry-level opportunity with an esteemed organization where I can utilize my skills and enhance learning in the field of work. Capable of mastering new skills.</p>
-          </div>
-
-          <div class="about">
-            <h2 class="title2">Education</h2>
-            <div class="box">
-                <div class="year">
-                <h5>2021-2016</h5>
-                </div>
-                <div class="text">
-                <h4>Bachelor of Computer Engineering</h4>
-                <p>Savitribai Phule Pune University</p>
-                </div>
+      <div class="sub-container-1">
+        <div class="home-page" id="home">
+          <div class="content">
+            <div class="left-content">
+              <!-- <div class="intro"> -->
+              <h2 class="animate__animated animate__slideInLeft">Hello, I'm</h2>
+              <h1
+                class="
+                  animate__animated animate__slideInLeft animate__delay-0.5s
+                "
+              >
+                Swapnil
+              </h1>
+              <h1
+                class="
+                  animate__animated animate__slideInLeft animate__delay-0.5s
+                "
+              >
+                Kotkar
+              </h1>
+              <h3
+                class="
+                  animate__animated animate__slideInLeft animate__delay-0.5s
+                "
+              >
+                frontend developer
+              </h3>
+              <!-- </div> -->
             </div>
-            <div class="box">
-                <div class="year">
-                <h5>2016-2014</h5>
-                </div>
-                <div class="text">
-                <h4>H.S.C</h4>
-                <p>Gayatri junior college, Moshi Pune</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="year">
-                <h5>2014-2013</h5>
-                </div>
-                <div class="text">
-                <h4>S.S.C</h4>
-                <p>P. Jog High School, Chinchwad Pune</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="about">
-            <h2 class="title2">Experience</h2>
-            <div class="box">
-                
-                <div class="text">
-                <h4>Project: Document Digitization</h4>
-                <p>Implemented document digitization project using html, css, java, js , jsp, bootstrap, MySQL on Netbeans IDE. This facility has been provided to users to help them digitally store their documents like RC, DL, medical reports, certificates, etc. electronically. Our system has reduced paperwork and eliminated the use of Xerox copies of original documents. Users can rapidly access documents anywhere/anytime. And because of the document encryption provided by our system, users’ documents are secured on our website.</p>
-                </div>
-            </div>
-           
-          </div>
-
-          <div class="about skills">
-            <h2 class="title2">Certification</h2>
-            <div class="box">
-                <div class="year">
-                <h5>2018</h5>
-                </div>
-                <div class="text">
-                <h4>Core Java</h4>
-                <p>Grade : B+</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="year">
-                <h5>2017</h5>
-                </div>
-                <div class="text">
-                <h4>C Programming</h4>
-                <p>Grade : A</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="about interest">
-            <h2 class="title2">Area of Interest</h2>
-            <div class="box">
-                
-                <div class="text">
-                <p>-Comfortable working in a wide variety of environments.
-                </p>
-                </div>
-            </div>
-            <div class="box">
-                
-                <div class="text">
-                <p>-Can quickly learn and adapt to new skills.</p>
-                </div>
-            </div>
-            <div class="box">
-                
-                <div class="text">
-                <p>-Good Communication skill.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="about hobbies">
-              <h2 class="title2">Hobbies</h2>
-              <div class="icons">
-                <i class="fas fa-gamepad"></i>
-                <i class="fas fa-palette"></i>
-                <i class="fas fa-hiking"></i>
+            <div class="right-content">
+              <div class="intro animate__animated animate__fadeInUp">
+                <h3>
+                  <span>&emsp; &emsp; &emsp;&emsp;</span> I design and build
+                  quality responsive websites, clean user interfaces and rich
+                  interactive web apps. Targeting
+                  <span class="coding">ReactJS</span>,
+                  <span class="coding">Javascript</span> and other web
+                  development opportunities and mostly focussing on
+                  <span class="coding">UI/UX</span> designing. I'm open to
+                  learning, adapt to work with the team, freelance
+                  opportunities, contract jobs and use skills to solve complex
+                  UI challenges and provide value to the growth of an
+                  organization.
+                </h3>
+                <!-- <div class="contact-me">
+                  <a href="#about">know more </a>
+                </div> -->
               </div>
-          </div>
-
-          <!-- <div class="about declaration">
-            <h2 class="title2">Declaration</h2>
-            <div class="box">
-                
-                <div class="text">
-                <p>I hereby declare that all information stated above is correct to best my knowledge and
-                    belief.</p>
-                </div>
             </div>
-            </div> -->
-
+          </div>
+        </div>
+        <div class="about-page" data-aos="zoom-in" id="about">
+          <div class="about-title"><h2>About Me</h2></div>
+          <div class="about-content">
+            <h3>
+              Hello!, my name is Swapnil.
+              <br />
+              The scope of my work is a large part of frontend which includes
+              HTML, design, coding layouts, single page applications, responsive
+              websites, web apps, CSS/JS animations, and other work based on web
+              development and javascript. I like to code things for web, and
+              enjoy bringing ideas to life in the browser. <br />
+              I'm always open to adapt to work with team and work on new
+              frontend skills and technology.
+              <div class="contact-me">
+                <a href="Swapnil-CV.pdf" target="_blank" class="download-cv"
+                  >download.cv
+                </a>
+                <a href="#contact">contact me </a>
+              </div>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="sub-container-2">
+        <div class="skills-page" data-aos="zoom-in" id="skills">
+          <div class="skills-content">
+            <div class="skills-list">
+              <div class="html">
+                <h1>Html</h1>
+                <div class="percent">
+                  <div></div>
+                </div>
+              </div>
+              <div class="css">
+                <h1>css</h1>
+                <div class="percent">
+                  <div></div>
+                </div>
+              </div>
+              <div class="js">
+                <h1>js</h1>
+                <div class="percent">
+                  <div></div>
+                </div>
+              </div>
+              <div class="reactjs">
+                <h1>reactJS</h1>
+                <div class="percent">
+                  <div></div>
+                </div>
+              </div>
+              <div class="bootstrap">
+                <h1>bootstrap</h1>
+                <div class="percent">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills-title"><h2>Skill Sets</h2></div>
+        </div>
+        <div class="contact-page" data-aos="zoom-in" id="contact">
+          <div class="contact-title"><h2>Contact</h2></div>
+          <div class="contact-content">
+            <!-- <h1>Get In Touch</h1> -->
+            <form action="POST" data-netlify="true">
+              <div class="heading"><h1>Get In Touch</h1></div>
+              <div class="contact-form">
+                <div class="contact-data">
+                  <div class="customer-details">
+                    <input
+                      type="text"
+                      name="name"
+                      id="customer-name"
+                      placeholder="Name"
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      id="customer-email"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div class="customer-message">
+                    <textarea
+                      name="message"
+                      id="customer-message"
+                      placeholder="Message here ..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="send-message">
+                    <input class="submit_btn" type="submit"></input>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="contact-us">
+              <div class="info">
+                <div class="heading"><h2>Contact Me</h2></div>
+                <div class="contact-details">
+                  <div class="email">
+                    <div class="email-logo">
+                      <i class="fas fa-envelope" style="color: #edc681"></i>
+                    </div>
+                    <div class="email-details">swapnilkotkar793@gmail.com</div>
+                  </div>
+                  <div class="phone">
+                    <div class="phone-logo">
+                      <i class="fas fa-mobile" style="color: #edc681"></i>
+                    </div>
+                    <div class="phone-details">+91 95528 37403</div>
+                  </div>
+                  <div class="address">
+                    <div class="address-logo">
+                      <i class="fas fa-home" style="color: #edc681"></i>
+                    </div>
+                    <div class="address-details">
+                      Moshi, Pune, Maharashtra, India
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>
+
