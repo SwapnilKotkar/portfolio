@@ -136,6 +136,7 @@ body::-webkit-scrollbar {
   height: 100%;
   width: 100%;
   background-image: url(./images/hex.svg);
+  background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
   display: flex;
