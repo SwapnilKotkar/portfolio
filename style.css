@@ -133,8 +133,8 @@ body::-webkit-scrollbar {
 /* ------------main content css starts here-------------------- */
 
 .container {
-  height: 400vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-image: url(./images/hex.svg);
   background-attachment: fixed;
   overflow: hidden;
